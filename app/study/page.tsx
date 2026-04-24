@@ -8,11 +8,13 @@ import ProgressBar from '@/components/ProgressBar'
 import { getAllSamples } from '@/lib/sampleLoader'
 import { getOrCreateSession, advanceSession, SessionState } from '@/lib/randomize'
 import { getSupabase } from '@/lib/supabase'
+import { useLang } from '@/lib/i18n'
 
 type Choice = 'left' | 'right' | 'similar'
 
 export default function StudyPage() {
   const router = useRouter()
+  const { t } = useLang()
   const [session, setSession] = useState<SessionState | null>(null)
   const [selected, setSelected] = useState<Choice | null>(null)
   const [submitting, setSubmitting] = useState(false)
@@ -62,8 +64,8 @@ export default function StudyPage() {
       })
 
       if (dbError) {
-        console.error('Supabase 写入错误:', dbError)
-        setError('保存失败，请重试。')
+        console.error('Supabase error:', dbError)
+        setError(t.study.error)
         setSelected(null)
         setSubmitting(false)
         return
@@ -80,13 +82,13 @@ export default function StudyPage() {
         questionStartTime.current = Date.now()
       }
     },
-    [session, selected, submitting, router]
+    [session, selected, submitting, router, t]
   )
 
   if (!session) {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
-        <p className="text-gray-400 animate-pulse text-lg">加载中...</p>
+        <p className="text-gray-400 animate-pulse text-lg">{t.study.loading}</p>
       </div>
     )
   }
@@ -100,7 +102,7 @@ export default function StudyPage() {
       <ProgressBar current={displayIndex} total={total} />
 
       <h2 className="text-center text-xl font-semibold text-gray-700">
-        哪张图片的整体视觉效果更好？
+        {t.study.question}
       </h2>
 
       <ImagePair
@@ -120,7 +122,7 @@ export default function StudyPage() {
 
       {submitting && (
         <p className="text-center text-gray-400 text-sm animate-pulse">
-          正在保存...
+          {t.study.saving}
         </p>
       )}
     </div>

@@ -2,8 +2,11 @@
 
 import { useEffect } from 'react'
 import { clearSession } from '@/lib/randomize'
+import { useLang } from '@/lib/i18n'
 
 export default function DonePage() {
+  const { t } = useLang()
+
   useEffect(() => {
     clearSession()
   }, [])
@@ -15,16 +18,9 @@ export default function DonePage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
       </div>
-      <h1 className="text-3xl font-bold text-gray-900">
-        感谢您的参与！
-      </h1>
-      <p className="text-lg text-gray-600 max-w-prose">
-        您的回答已成功记录。感谢您抽出宝贵时间参与本次研究，
-        您的贡献对我们的研究非常重要。
-      </p>
-      <p className="text-gray-400 text-sm">
-        您现在可以关闭此页面。
-      </p>
+      <h1 className="text-3xl font-bold text-gray-900">{t.done.title}</h1>
+      <p className="text-lg text-gray-600 max-w-prose">{t.done.body}</p>
+      <p className="text-gray-400 text-sm">{t.done.close}</p>
     </div>
   )
 }

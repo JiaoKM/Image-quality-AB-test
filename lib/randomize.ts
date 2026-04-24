@@ -10,12 +10,14 @@ export interface DisplayPair {
 }
 
 export interface SessionState {
+  version: number
   participant_id: string
   ordered_pairs: DisplayPair[]
   current_index: number
 }
 
 const KEY_SESSION = 'abtest_session'
+const SESSION_VERSION = 2
 
 function generateUUID(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
@@ -58,6 +60,7 @@ export function getOrCreateSession(samples: Sample[]): SessionState {
     try {
       const parsed = JSON.parse(raw) as SessionState
       if (
+        parsed.version === SESSION_VERSION &&
         parsed.participant_id &&
         Array.isArray(parsed.ordered_pairs) &&
         parsed.ordered_pairs.length === samples.length &&
@@ -72,6 +75,7 @@ export function getOrCreateSession(samples: Sample[]): SessionState {
 
   const ordered_pairs = shuffle(samples.map(buildDisplayPair))
   const session: SessionState = {
+    version: SESSION_VERSION,
     participant_id: generateUUID(),
     ordered_pairs,
     current_index: 0,

@@ -4,6 +4,7 @@ export interface Sample {
   sample_id: string
   image_a: string
   image_b: string
+  image_ref?: string
   method_a: string
   method_b: string
 }

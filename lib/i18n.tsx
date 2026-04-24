@@ -16,8 +16,8 @@ const translations = {
     instructions: {
       title: 'Instructions',
       items: [
-        'You will see two images displayed side by side. On mobile devices, they are shown one above the other.',
-        'Compare the overall visual quality — sharpness, detail, realism, and absence of artifacts.',
+        'You will see a reference image at the top (to show what the original looks like), followed by two comparison images side by side (stacked on mobile).',
+        'Compare the two images based on overall visual quality — detail, realism, naturalness, and absence of artifacts.',
         'Click the button that matches your preference, or "Similar / No Preference" if you cannot tell a difference.',
         'There are no right or wrong answers — go with your first impression.',
         'Once you click a choice you cannot change it, so take a moment before deciding.',
@@ -28,7 +28,7 @@ const translations = {
     },
     study: {
       loading: 'Loading...',
-      question: 'Which image looks better overall?',
+      question: 'Which of the two images looks better overall?',
       leftBetter: 'Left is Better',
       similar: 'Similar / No Preference',
       rightBetter: 'Right is Better',
@@ -52,6 +52,7 @@ const translations = {
       right: 'Right',
       top: 'Top',
       bottom: 'Bottom',
+      ref: 'Reference',
     },
   },
 
@@ -66,8 +67,8 @@ const translations = {
     instructions: {
       title: 'Instruktioner',
       items: [
-        'Du kommer att se två bilder visade sida vid sida. På mobila enheter visas de ovanför varandra.',
-        'Jämför den övergripande visuella kvaliteten – skärpa, detaljer, realism och frånvaro av artefakter.',
+        'Du kommer att se en referensbild längst upp (för att visa hur originalet ser ut), följt av två jämförelsebilder sida vid sida (ovanför varandra på mobil).',
+        'Jämför de två bilderna utifrån den övergripande visuella kvaliteten – detaljer, realism, naturlighet och frånvaro av artefakter.',
         'Klicka på knappen som matchar din preferens, eller "Liknande / Ingen preferens" om du inte kan avgöra skillnaden.',
         'Det finns inga rätt eller fel svar – gå efter ditt första intryck.',
         'När du klickat på ett val kan du inte ändra det, så ta ett ögonblick att tänka.',
@@ -78,7 +79,7 @@ const translations = {
     },
     study: {
       loading: 'Laddar...',
-      question: 'Vilken bild ser bäst ut totalt sett?',
+      question: 'Vilken av de två bilderna ser bättre ut totalt sett?',
       leftBetter: 'Vänster är bättre',
       similar: 'Liknande / Ingen preferens',
       rightBetter: 'Höger är bättre',
@@ -102,6 +103,7 @@ const translations = {
       right: 'Höger',
       top: 'Övre',
       bottom: 'Nedre',
+      ref: 'Referensbild',
     },
   },
 
@@ -116,8 +118,8 @@ const translations = {
     instructions: {
       title: '实验说明',
       items: [
-        '每次您将看到两张图片并排显示。在手机上，图片会上下排列。',
-        '请综合比较两张图片的整体视觉质量，包括清晰度、细节、真实感和是否有明显的瑕疵。',
+        '每题顶部会展示一张参考图（帮助你了解原始图像的样子），下方是两张对比图并排显示（手机上为上下排列）。',
+        '比较两张图的整体视觉质量，包括细节、真实感、自然度和是否有明显的瑕疵。',
         '根据您的判断，点击对应的按钮，或选择「差不多 / 无偏好」。',
         '没有标准答案，请依据您的第一印象作出选择即可。',
         '点击按钮后无法修改，请稍作思考后再点击。',
@@ -128,7 +130,7 @@ const translations = {
     },
     study: {
       loading: '加载中...',
-      question: '哪张图片的整体视觉效果更好？',
+      question: '两张图中，哪张的整体效果更好？',
       leftBetter: '左图更好',
       similar: '差不多 / 无偏好',
       rightBetter: '右图更好',
@@ -152,6 +154,7 @@ const translations = {
       right: '右图',
       top: '上图',
       bottom: '下图',
+      ref: '参考图',
     },
   },
 }

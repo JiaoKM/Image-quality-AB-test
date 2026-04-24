@@ -4,6 +4,7 @@
       "sample_id": "sample_001",
       "image_a": "samples/sample_001_A.png",
       "image_b": "samples/sample_001_B.png",
+      "image_ref": "samples/sample_001_ref.png",
       "method_a": "Ours",
       "method_b": "Baseline"
     }

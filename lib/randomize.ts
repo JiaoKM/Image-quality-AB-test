@@ -6,6 +6,7 @@ export interface DisplayPair {
   right_image: string
   left_method: string
   right_method: string
+  ref_image?: string
 }
 
 export interface SessionState {
@@ -43,6 +44,7 @@ function buildDisplayPair(sample: Sample): DisplayPair {
     right_image:  swapped ? `/${sample.image_a}` : `/${sample.image_b}`,
     left_method:  swapped ? sample.method_b      : sample.method_a,
     right_method: swapped ? sample.method_a      : sample.method_b,
+    ref_image:    sample.image_ref ? `/${sample.image_ref}` : undefined,
   }
 }
 

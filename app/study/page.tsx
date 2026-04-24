@@ -37,7 +37,9 @@ export default function StudyPage() {
     const nextIndex = session.current_index + 1
     if (nextIndex >= session.ordered_pairs.length) return
     const nextPair = session.ordered_pairs[nextIndex]
-    ;[nextPair.left_image, nextPair.right_image].forEach((src) => {
+    const srcs = [nextPair.left_image, nextPair.right_image]
+    if (nextPair.ref_image) srcs.push(nextPair.ref_image)
+    srcs.forEach((src) => {
       const img = new window.Image()
       img.src = src
     })
@@ -108,6 +110,7 @@ export default function StudyPage() {
       <ImagePair
         leftSrc={currentPair.left_image}
         rightSrc={currentPair.right_image}
+        refSrc={currentPair.ref_image}
       />
 
       {error && (

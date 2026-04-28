@@ -4,7 +4,7 @@
       "sample_id": "test_01",
       "image_a": "test01/test_view_0.2.png",
       "image_b": "test01/test_view_0.5.png",
-      "image_ref": "test01/ref.png",
+      "image_ref": "test01/ref.jpg",
       "method_a": "0.2",
       "method_b": "0.5"
     }

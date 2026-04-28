@@ -23,6 +23,30 @@
       "image_ref": "test03/ref.jpg",
       "method_a": "0.5",
       "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_04",
+      "image_a": "test04/face_0.2.png",
+      "image_b": "test04/face_0.5.png",
+      "image_ref": "test04/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_05",
+      "image_a": "test05/face_0.2.png",
+      "image_b": "test05/face_0.8.png",
+      "image_ref": "test05/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_06",
+      "image_a": "test06/face_0.5.png",
+      "image_b": "test06/face_0.8.png",
+      "image_ref": "test06/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
     }
   ]
 }

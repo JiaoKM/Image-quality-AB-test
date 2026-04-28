@@ -1,12 +1,12 @@
 {
   "samples": [
     {
-      "sample_id": "sample_001",
-      "image_a": "samples/sample_001_A.png",
-      "image_b": "samples/sample_001_B.png",
-      "image_ref": "samples/sample_001_ref.png",
-      "method_a": "Ours",
-      "method_b": "Baseline"
+      "sample_id": "test_01",
+      "image_a": "test01/test_view_0.2.png",
+      "image_b": "test01/test_view_0.5.png",
+      "image_ref": "test01/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
     }
   ]
 }

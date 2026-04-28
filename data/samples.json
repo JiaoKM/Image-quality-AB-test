@@ -7,6 +7,22 @@
       "image_ref": "test01/ref.jpg",
       "method_a": "0.2",
       "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_02",
+      "image_a": "test02/test_view_0.2.png",
+      "image_b": "test02/test_view_0.8.png",
+      "image_ref": "test02/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_03",
+      "image_a": "test03/test_view_0.5.png",
+      "image_b": "test03/test_view_0.8.png",
+      "image_ref": "test03/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
     }
   ]
 }

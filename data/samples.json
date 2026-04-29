@@ -47,6 +47,318 @@
       "image_ref": "test06/ref.jpg",
       "method_a": "0.5",
       "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_07",
+      "image_a": "test07/front_45_0.2.png",
+      "image_b": "test07/front_45_0.5.png",
+      "image_ref": "test07/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_08",
+      "image_a": "test08/front_45_0.2.png",
+      "image_b": "test08/front_45_0.8.png",
+      "image_ref": "test08/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_09",
+      "image_a": "test09/front_45_0.5.png",
+      "image_b": "test09/front_45_0.8.png",
+      "image_ref": "test09/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_10",
+      "image_a": "test10/test_view_0.2.png",
+      "image_b": "test10/test_view_0.5.png",
+      "image_ref": "test10/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_11",
+      "image_a": "test11/test_view_0.2.png",
+      "image_b": "test11/test_view_0.8.png",
+      "image_ref": "test11/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_12",
+      "image_a": "test12/test_view_0.5.png",
+      "image_b": "test12/test_view_0.8.png",
+      "image_ref": "test12/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_13",
+      "image_a": "test13/front_0.2.png",
+      "image_b": "test13/front_0.5.png",
+      "image_ref": "test13/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_14",
+      "image_a": "test14/front_0.2.png",
+      "image_b": "test14/front_0.8.png",
+      "image_ref": "test14/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_15",
+      "image_a": "test15/front_0.5.png",
+      "image_b": "test15/front_0.8.png",
+      "image_ref": "test15/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_16",
+      "image_a": "test16/front_0.2.png",
+      "image_b": "test16/front_0.5.png",
+      "image_ref": "test16/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_17",
+      "image_a": "test17/front_0.2.png",
+      "image_b": "test17/front_0.8.png",
+      "image_ref": "test17/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_18",
+      "image_a": "test18/front_0.5.png",
+      "image_b": "test18/front_0.8.png",
+      "image_ref": "test18/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_19",
+      "image_a": "test19/test_view_0.2.png",
+      "image_b": "test19/test_view_0.5.png",
+      "image_ref": "test19/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_20",
+      "image_a": "test20/test_view_0.2.png",
+      "image_b": "test20/test_view_0.8.png",
+      "image_ref": "test20/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_21",
+      "image_a": "test21/test_view_0.5.png",
+      "image_b": "test21/test_view_0.8.png",
+      "image_ref": "test21/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_22",
+      "image_a": "test22/face_0.2.png",
+      "image_b": "test22/face_0.5.png",
+      "image_ref": "test22/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_23",
+      "image_a": "test23/face_0.2.png",
+      "image_b": "test23/face_0.8.png",
+      "image_ref": "test23/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_24",
+      "image_a": "test24/face_0.5.png",
+      "image_b": "test24/face_0.8.png",
+      "image_ref": "test24/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_25",
+      "image_a": "test25/front_45_0.2.png",
+      "image_b": "test25/front_45_0.5.png",
+      "image_ref": "test25/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_26",
+      "image_a": "test26/front_45_0.2.png",
+      "image_b": "test26/front_45_0.8.png",
+      "image_ref": "test26/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_27",
+      "image_a": "test27/front_45_0.5.png",
+      "image_b": "test27/front_45_0.8.png",
+      "image_ref": "test27/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_28",
+      "image_a": "test28/test_view_0.2.png",
+      "image_b": "test28/test_view_0.5.png",
+      "image_ref": "test28/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_29",
+      "image_a": "test29/test_view_0.2.png",
+      "image_b": "test29/test_view_0.8.png",
+      "image_ref": "test29/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_30",
+      "image_a": "test30/test_view_0.5.png",
+      "image_b": "test30/test_view_0.8.png",
+      "image_ref": "test30/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_31",
+      "image_a": "test31/face_0.2.png",
+      "image_b": "test31/face_0.5.png",
+      "image_ref": "test31/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_32",
+      "image_a": "test32/face_0.2.png",
+      "image_b": "test32/face_0.8.png",
+      "image_ref": "test32/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_33",
+      "image_a": "test33/face_0.5.png",
+      "image_b": "test33/face_0.8.png",
+      "image_ref": "test33/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_34",
+      "image_a": "test34/face_0.2.png",
+      "image_b": "test34/face_0.5.png",
+      "image_ref": "test34/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_35",
+      "image_a": "test35/face_0.2.png",
+      "image_b": "test35/face_0.8.png",
+      "image_ref": "test35/ref.png",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_36",
+      "image_a": "test36/face_0.5.png",
+      "image_b": "test36/face_0.8.png",
+      "image_ref": "test36/ref.png",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_37",
+      "image_a": "test37/test_view_0.2.png",
+      "image_b": "test37/test_view_0.5.png",
+      "image_ref": "test37/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_38",
+      "image_a": "test38/test_view_0.2.png",
+      "image_b": "test38/test_view_0.8.png",
+      "image_ref": "test38/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_39",
+      "image_a": "test39/test_view_0.5.png",
+      "image_b": "test39/test_view_0.8.png",
+      "image_ref": "test39/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_40",
+      "image_a": "test40/front_45_0.2.png",
+      "image_b": "test40/front_45_0.5.png",
+      "image_ref": "test40/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_41",
+      "image_a": "test41/front_45_0.2.png",
+      "image_b": "test41/front_45_0.8.png",
+      "image_ref": "test41/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_42",
+      "image_a": "test42/front_45_0.5.png",
+      "image_b": "test42/front_45_0.8.png",
+      "image_ref": "test42/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_43",
+      "image_a": "test43/face_45_0.2.png",
+      "image_b": "test43/face_45_0.5.png",
+      "image_ref": "test43/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.5"
+    },
+    {
+      "sample_id": "test_44",
+      "image_a": "test44/face_45_0.2.png",
+      "image_b": "test44/face_45_0.8.png",
+      "image_ref": "test44/ref.jpg",
+      "method_a": "0.2",
+      "method_b": "0.8"
+    },
+    {
+      "sample_id": "test_45",
+      "image_a": "test45/face_45_0.5.png",
+      "image_b": "test45/face_45_0.8.png",
+      "image_ref": "test45/ref.jpg",
+      "method_a": "0.5",
+      "method_b": "0.8"
     }
   ]
 }

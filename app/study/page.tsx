@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import ImagePair from '@/components/ImagePair'
-import ChoiceButtons from '@/components/ChoiceButtons'
 import ProgressBar from '@/components/ProgressBar'
 import { getAllSamples } from '@/lib/sampleLoader'
 import { getOrCreateSession, advanceSession, SessionState } from '@/lib/randomize'
@@ -111,17 +110,14 @@ export default function StudyPage() {
         leftSrc={currentPair.left_image}
         rightSrc={currentPair.right_image}
         refSrc={currentPair.ref_image}
+        onChoice={handleChoice}
+        disabled={selected !== null || submitting}
+        selected={selected}
       />
 
       {error && (
         <p className="text-center text-red-500 text-sm font-medium">{error}</p>
       )}
-
-      <ChoiceButtons
-        onChoice={handleChoice}
-        disabled={selected !== null || submitting}
-        selected={selected}
-      />
 
       {submitting && (
         <p className="text-center text-gray-400 text-sm animate-pulse">

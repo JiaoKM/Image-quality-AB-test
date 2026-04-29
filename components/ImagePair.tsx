@@ -16,15 +16,13 @@ interface ImagePairProps {
 
 function ChoiceBtn({
   value,
-  desktopLabel,
-  mobileLabel,
+  label,
   selected,
   disabled,
   onChoice,
 }: {
   value: Choice
-  desktopLabel: string
-  mobileLabel: string
+  label: string
   selected: Choice | null
   disabled: boolean
   onChoice: (c: Choice) => void
@@ -44,8 +42,7 @@ function ChoiceBtn({
         disabled && !isSelected ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer',
       ].join(' ')}
     >
-      <span className="hidden md:inline">{desktopLabel}</span>
-      <span className="md:hidden">{mobileLabel}</span>
+      {label}
     </button>
   )
 }
@@ -59,92 +56,112 @@ export default function ImagePair({
   selected,
 }: ImagePairProps) {
   const { t } = useLang()
-  const colClass = refSrc ? 'w-full md:w-1/3' : 'w-full md:w-1/2'
+  const colClass = refSrc ? 'w-1/3' : 'w-1/2'
 
   return (
-    <div className="flex flex-col md:flex-row gap-3 w-full items-start">
-      {/* 左图（桌面左，手机上） */}
-      <div className={`flex flex-col items-center ${colClass}`}>
-        <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
-          <span className="hidden md:inline">{t.img.left}</span>
-          <span className="md:hidden">{t.img.top}</span>
-        </span>
-        <div className="w-full rounded-lg overflow-hidden shadow-md">
-          <Image
-            src={leftSrc}
-            alt={t.img.left}
-            width={0}
-            height={0}
-            sizes={refSrc ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 100vw, 50vw'}
-            className="w-full h-auto"
-            priority
-          />
-        </div>
-        <ChoiceBtn
-          value="left"
-          desktopLabel={t.study.leftBetter}
-          mobileLabel={t.study.topBetter}
-          selected={selected}
-          disabled={disabled}
-          onChoice={onChoice}
-        />
-      </div>
-
-      {/* 参考图（桌面中） */}
-      {refSrc && (
-        <div className="flex flex-col items-center w-full md:w-1/3">
-          <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-0.5 mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-            {t.img.ref}
+    <>
+      {/* ── 桌面布局：左图 | 参考图 | 右图，按钮各在图片下方 ── */}
+      <div className="hidden md:flex gap-3 w-full items-start">
+        {/* 左图列 */}
+        <div className={`flex flex-col items-center ${colClass}`}>
+          <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
+            {t.img.left}
           </span>
           <div className="w-full rounded-lg overflow-hidden shadow-md">
             <Image
-              src={refSrc}
-              alt={t.img.ref}
+              src={leftSrc}
+              alt={t.img.left}
               width={0}
               height={0}
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes={refSrc ? '33vw' : '50vw'}
               className="w-full h-auto"
               priority
             />
           </div>
-          <ChoiceBtn
-            value="similar"
-            desktopLabel={t.study.similar}
-            mobileLabel={t.study.similar}
-            selected={selected}
-            disabled={disabled}
-            onChoice={onChoice}
-          />
+          <ChoiceBtn value="left" label={t.study.leftBetter} selected={selected} disabled={disabled} onChoice={onChoice} />
         </div>
-      )}
 
-      {/* 右图（桌面右，手机下） */}
-      <div className={`flex flex-col items-center ${colClass}`}>
-        <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
-          <span className="hidden md:inline">{t.img.right}</span>
-          <span className="md:hidden">{t.img.bottom}</span>
-        </span>
-        <div className="w-full rounded-lg overflow-hidden shadow-md">
-          <Image
-            src={rightSrc}
-            alt={t.img.right}
-            width={0}
-            height={0}
-            sizes={refSrc ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 100vw, 50vw'}
-            className="w-full h-auto"
-          />
+        {/* 参考图列（居中） */}
+        {refSrc && (
+          <div className={`flex flex-col items-center ${colClass}`}>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-0.5 mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              {t.img.ref}
+            </span>
+            <div className="w-full rounded-lg overflow-hidden shadow-md">
+              <Image
+                src={refSrc}
+                alt={t.img.ref}
+                width={0}
+                height={0}
+                sizes="33vw"
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+            <ChoiceBtn value="similar" label={t.study.similar} selected={selected} disabled={disabled} onChoice={onChoice} />
+          </div>
+        )}
+
+        {/* 右图列 */}
+        <div className={`flex flex-col items-center ${colClass}`}>
+          <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
+            {t.img.right}
+          </span>
+          <div className="w-full rounded-lg overflow-hidden shadow-md">
+            <Image
+              src={rightSrc}
+              alt={t.img.right}
+              width={0}
+              height={0}
+              sizes={refSrc ? '33vw' : '50vw'}
+              className="w-full h-auto"
+            />
+          </div>
+          <ChoiceBtn value="right" label={t.study.rightBetter} selected={selected} disabled={disabled} onChoice={onChoice} />
         </div>
-        <ChoiceBtn
-          value="right"
-          desktopLabel={t.study.rightBetter}
-          mobileLabel={t.study.bottomBetter}
-          selected={selected}
-          disabled={disabled}
-          onChoice={onChoice}
-        />
       </div>
 
-    </div>
+      {/* ── 移动端布局：参考图 → 上图 → 下图 → 上图更好 → 下图更好 → 无偏好 ── */}
+      <div className="flex flex-col gap-3 w-full md:hidden">
+        {/* 参考图 */}
+        {refSrc && (
+          <div className="flex flex-col items-center">
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-0.5 mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              {t.img.ref}
+            </span>
+            <div className="w-full rounded-lg overflow-hidden shadow-md">
+              <Image src={refSrc} alt={t.img.ref} width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </div>
+          </div>
+        )}
+
+        {/* 上图（左） */}
+        <div className="flex flex-col items-center">
+          <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
+            {t.img.top}
+          </span>
+          <div className="w-full rounded-lg overflow-hidden shadow-md">
+            <Image src={leftSrc} alt={t.img.top} width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+          </div>
+        </div>
+
+        {/* 下图（右） */}
+        <div className="flex flex-col items-center">
+          <span className="text-sm font-semibold text-gray-500 mb-2 tracking-wide uppercase">
+            {t.img.bottom}
+          </span>
+          <div className="w-full rounded-lg overflow-hidden shadow-md">
+            <Image src={rightSrc} alt={t.img.bottom} width={0} height={0} sizes="100vw" className="w-full h-auto" />
+          </div>
+        </div>
+
+        {/* 按钮：上图更好 → 下图更好 → 无偏好 */}
+        <ChoiceBtn value="left"    label={t.study.topBetter}    selected={selected} disabled={disabled} onChoice={onChoice} />
+        <ChoiceBtn value="right"   label={t.study.bottomBetter} selected={selected} disabled={disabled} onChoice={onChoice} />
+        <ChoiceBtn value="similar" label={t.study.similar}      selected={selected} disabled={disabled} onChoice={onChoice} />
+      </div>
+    </>
   )
 }
